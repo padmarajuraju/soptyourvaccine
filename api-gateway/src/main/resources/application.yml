@@ -3,4 +3,4 @@ spring:
             config:
               server:
                 git:
-                  uri: https://gitlab-gl.stackroute.in/jitender.1/config-server-spotyourvaccine.git
+                  uri: https://github.com/padmarajuraju/soptyourvaccine.git
