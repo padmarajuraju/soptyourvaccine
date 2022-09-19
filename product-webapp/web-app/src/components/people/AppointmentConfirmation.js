@@ -131,7 +131,7 @@ function Confirmation() {
       });
     } else {
       // fetch('http://localhost:8080/slot-booking-service/api/v1/slot',
-      fetch('https://spotyourvaccine.stackroute.io/slot-booking-service/api/v1/slot',
+      fetch('http://3.142.208.221:8080/slot-booking-service/api/v1/slot',
         {
           headers: {
             'Content-Type': 'application/json',
@@ -163,7 +163,7 @@ function Confirmation() {
 
   function updateStatusAsBooked(slotId) {
     // let url = "http://localhost:8080/slot-booking-service/api/v1/slot/status/" + slotId + "?status=BOOKEED";
-    let url = "https://spotyourvaccine.stackroute.io/slot-booking-service/api/v1/slot/status/" + slotId + "?status=BOOKEED";
+    let url = "http://3.142.208.221:8080/slot-booking-service/api/v1/slot/status/" + slotId + "?status=BOOKEED";
     return fetch(url,
       {
         headers: {
