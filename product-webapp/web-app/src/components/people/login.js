@@ -33,7 +33,7 @@ function Login() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({...user})
         };
-        fetch('https://spotyourvaccine.stackroute.io/authentication-service/api/v1/login', requestOptions)
+        fetch('http://3.142.208.221:8080/authentication-service/api/v1/login', requestOptions)
             .then((result) => {
                 if (result.status === 200) {
                     const requestOptions1 = {
