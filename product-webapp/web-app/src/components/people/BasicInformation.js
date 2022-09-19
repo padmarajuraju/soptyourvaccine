@@ -34,7 +34,7 @@ function BasicInformation() {
 
     const getUserDetailsById = (id) => {
         // var url = "http://localhost:8080/user-service/api/v1/user/user/" + id;
-        var url = "http://3.142.208.221:8080/user-service/api/v1/user/user/" + id;
+        var url = "http://3.142.208.221:4200/user-service/api/v1/user/user/" + id;
         return fetch(url,
             {
                 headers: {
@@ -361,7 +361,7 @@ function SaveChanges(user) {
     updatedUser.password = user.password
 
     // var url = "http://localhost:8080/user-service/api/v1/user/user/" + user.id;
-    var url = "http://3.142.208.221:8080/user-service/api/v1/user/user/" + user.id;
+    var url = "http://3.142.208.221:4200/user-service/api/v1/user/user/" + user.id;
 
     return fetch(url,
         {
