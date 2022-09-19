@@ -35,7 +35,7 @@ function Appointments() {
         setDisplayFlag(true);
         let email = localStorage.getItem("centerEmail")
         // let url = 'http://localhost:8080/slot-booking-service/api/v1/getByVaccinationEmail/' + email;
-        let url = 'http://3.142.208.221:8080/slot-booking-service/api/v1/getByVaccinationEmail/' + email;
+        let url = 'http://3.142.208.221:4200/slot-booking-service/api/v1/getByVaccinationEmail/' + email;
         axios.get(url).then(res=>{
           
           if(ck == 0){
@@ -51,7 +51,7 @@ function getUserDetails(infoArr){
         var temp;
         if(e.slot.status == "BOOKED"){
         // let userurl = 'http://localhost:8080/user-service/api/v1/user/user/' + e.userEmail;
-        let userurl = 'http://3.142.208.221:8080/user-service/api/v1/user/user/' + e.userEmail;
+        let userurl = 'http://3.142.208.221:4200/user-service/api/v1/user/user/' + e.userEmail;
             axios.get(userurl).then(res=>{
                 temp = res.data;
                 temp["idd"] = e.id;
@@ -83,7 +83,7 @@ const getDoneSlots = () => {
   setDisplayFlag(true);
   let email = localStorage.getItem("centerEmail");
   // let url = 'http://localhost:8080/slot-booking-service/api/v1/getByVaccinationEmail/' + email;
-  let url = 'http://3.142.208.221:8080/slot-booking-service/api/v1/getByVaccinationEmail/' + email;
+  let url = 'http://3.142.208.221:4200/slot-booking-service/api/v1/getByVaccinationEmail/' + email;
   axios.get(url).then(res=>{
       getUserDoneDetails(res.data);
   })
@@ -94,7 +94,7 @@ function getUserDoneDetails(infoDoneArr){
   infoDoneArr.map(e =>{
       if(e.slot.status.toLowerCase() == "expired"){
           // let userurl2 = 'http://localhost:8080/user-service/api/v1/user/user/' + e.userEmail;
-          let userurl2 = 'http://3.142.208.221:8080/user-service/api/v1/user/user/' + e.userEmail;
+          let userurl2 = 'http://3.142.208.221:4200/user-service/api/v1/user/user/' + e.userEmail;
               axios.get(userurl2).then(res=>{
                   done = res.data;
                   done["vaccine"] = e.vaccine;
