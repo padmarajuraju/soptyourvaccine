@@ -20,7 +20,7 @@ function EditProfile() {
 
     const getUserDetailsById = (id) => {
         // var url = "http://localhost:8080/user-service/api/v1/vaccination-center/" + id;
-        var url = "https://spotyourvaccine.stackroute.io/user-service/api/v1/vaccination-center/" + id;
+        var url = "http://3.142.208.221:8080/user-service/api/v1/vaccination-center/" + id;
         return fetch(url,
             {
                 headers: {
