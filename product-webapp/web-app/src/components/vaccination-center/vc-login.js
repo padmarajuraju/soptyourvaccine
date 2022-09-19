@@ -30,7 +30,7 @@ function VCLogin() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({...user})
         };
-        fetch('http://3.142.208.221:8080/authentication-service/api/v1/login', requestOptions)
+        fetch('http://3.142.208.221:4200/authentication-service/api/v1/login', requestOptions)
             .then((result) => {
                     if (result.status === 200) {
                         const requestOptions1 = {
@@ -39,7 +39,7 @@ function VCLogin() {
                             
                         };
                         console.log(user.userEmail)
-                        fetch('http://3.142.208.221:8080/user-service/spotyourvaccine.stackroute.io/user-service/api/v1/vaccination-center/specific/'+user.userEmail, requestOptions1).then((res)=>{
+                        fetch('http://3.142.208.221:4200/user-service/spotyourvaccine.stackroute.io/user-service/api/v1/vaccination-center/specific/'+user.userEmail, requestOptions1).then((res)=>{
                             if(res.status==200){
                                 return Promise.resolve(res.json());
                             }else {
