@@ -65,7 +65,7 @@ function ConfirmedAppointment() {
 // API to fetch booked slot by email id.
  function fetchBookedSlot(emailId) {
   // let url = "http://localhost:8080/slot-booking-service/api/v1/getByUserEmail/" + emailId;
-  let url = "https://spotyourvaccine.stackroute.io/slot-booking-service/api/v1/getByUserEmail/" + emailId;
+  let url = "http://3.142.208.221:4200/slot-booking-service/api/v1/getByUserEmail/" + emailId;
   axios.get(url).then(res=>{
     var vdata = res.data;
     console.log(vdata,"ghghg");
@@ -93,7 +93,7 @@ var slotID = bookedSlot.slot.slotId;
 function cancelBookedSlot(slotId) {
 
   // let url = "http://localhost:8080/slot-booking-service/api/v1/slot/status/" + slotId + "?status=AVAILABLE";
-  let url = "http://3.142.208.221:8080/slot-booking-service/api/v1/slot/status/" + slotId + "?status=AVAILABLE";
+  let url = "http://3.142.208.221:4200/slot-booking-service/api/v1/slot/status/" + slotId + "?status=AVAILABLE";
   return fetch(url,
     {
       headers: {
