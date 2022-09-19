@@ -23,7 +23,8 @@ function VCProfile() {
     const getUserData = () => {
         let email = localStorage.getItem("centerEmail");
         // let url = "http://localhost:8080/user-service/api/v1/vaccination-center/"+email;
-        let url = "https://spotyourvaccine.stackroute.io/user-service/api/v1/vaccination-center/"+email;
+        //let url = "https://spotyourvaccine.stackroute.io/user-service/api/v1/vaccination-center/"+email;
+        let url = "http://3.142.208.221:8080//user-service/api/v1/vaccination-center/"+email;
         return fetch(url , {headers:{
         'Content-Type': 'application/json',
         'Accept': 'application/json'
