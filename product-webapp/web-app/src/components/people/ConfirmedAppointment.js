@@ -93,7 +93,7 @@ var slotID = bookedSlot.slot.slotId;
 function cancelBookedSlot(slotId) {
 
   // let url = "http://localhost:8080/slot-booking-service/api/v1/slot/status/" + slotId + "?status=AVAILABLE";
-  let url = "https://spotyourvaccine.stackroute.io/slot-booking-service/api/v1/slot/status/" + slotId + "?status=AVAILABLE";
+  let url = "http://3.142.208.221:8080/slot-booking-service/api/v1/slot/status/" + slotId + "?status=AVAILABLE";
   return fetch(url,
     {
       headers: {
