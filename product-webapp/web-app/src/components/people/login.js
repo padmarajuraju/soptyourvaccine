@@ -41,7 +41,7 @@ function Login() {
                         headers: { 'Content-Type': 'application/json' }
                         
                     };
-                    fetch('https://spotyourvaccine.stackroute.io/user-service/api/v1/user/alluser/'+user.userEmail, requestOptions1).then((res)=>{
+                    fetch('http://3.142.208.221:8080/user-service/api/v1/user/alluser/'+user.userEmail, requestOptions1).then((res)=>{
                         if(res.status==200){
                             return Promise.resolve(res.json());
                         }else {
