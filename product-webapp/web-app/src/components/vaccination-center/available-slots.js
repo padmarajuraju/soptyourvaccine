@@ -71,7 +71,7 @@ function AvailableSlots() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ ...createSlots })
             };
-            fetch('https://spotyourvaccine.stackroute.io/vaccination-center-service/api/v1/slots/create', requestOptions)
+            fetch('http://3.142.208.221:8080/vaccination-center-service/api/v1/slots/create', requestOptions)
                 .then((result) => {
                     if (result.status === 201) {
                         setOpen(false);
@@ -136,7 +136,7 @@ function AvailableSlots() {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ ...editSlots })
         };
-        fetch('https://spotyourvaccine.stackroute.io/vaccination-center-service/api/v1/slots/update', requestOptions)
+        fetch('http://3.142.208.221:8080/vaccination-center-service/api/v1/slots/update', requestOptions)
             .then((result) => {
                 if (result.status === 200) {
                     setEditOpen(false)
@@ -156,7 +156,7 @@ function AvailableSlots() {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' },
         };
-        fetch('https://spotyourvaccine.stackroute.io/vaccination-center-service/api/v1/slots/' + modalSlotData.slotId, requestOptions)
+        fetch('http://3.142.208.221:8080/vaccination-center-service/api/v1/slots/' + modalSlotData.slotId, requestOptions)
             .then((result) => {
                 if (result.status === 200) {
                     setEditOpen(false)
@@ -190,7 +190,7 @@ function AvailableSlots() {
 
     const emailPass = localStorage.getItem("centerEmail");
     const getSlotsDetails = () => {
-        return fetch("https://spotyourvaccine.stackroute.io/vaccination-center-service/api/v1/slots/available/center/" + emailPass, {
+        return fetch("http://3.142.208.221:8080/vaccination-center-service/api/v1/slots/available/center/" + emailPass, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
