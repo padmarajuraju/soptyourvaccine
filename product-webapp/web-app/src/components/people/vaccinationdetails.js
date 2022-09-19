@@ -11,7 +11,7 @@ function Vaccinationdetails() {
 
     var emailPass = localStorage.getItem("userEmailId");
     const getVCDetails = () => {
-        return fetch("https://spotyourvaccine.stackroute.io/user-service/api/v1/user/alluser/" + emailPass, {
+        return fetch("http://3.142.208.221:8080/user-service/api/v1/user/alluser/" + emailPass, {
             headers: {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json'
